@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Recipe website</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0" >
+        <meta name="description" content="Resturants">
+        <meta name="keywords" content="Online Resturants,Book Resturants,Order Food Online,Online Delivery Meal,Foodbonda,Foodbonda.com">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="author" content="Pallavi singh">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+         <link rel="stylesheet" type="text/css" href="">
+         <style type="text/css">
+         body{
+    		line-height:1.4;
+    		font:400 15px 'Roboto', sans-serif;
+    		letter-spacing: 0.5px;
+    		color:#333;
+    	}
+    	/*navbar*/
+    	.navbar{
+    		padding: 1px 58px;
+    	}
+    	.navbar .navbar-nav .active{
+    		font-size: 18px;
+    		font-weight: 600px;
+    	}
+    	.navbar-nav>li>a{
+    		font-size: 18px;
+    		font-weight: 400;
+    		color:#FFF;
+    		outline:none;
+    	}
+    	.active{
+    		opacity: 1;
+    	} 
+       .navbar-nav .nav-item .nav-link{
+       	transition: 0.3s ease;
+       }
+       .navbar-nav .nav-item .nav-link:hover{
+       	transition: 0.3s ease;
+       	font-size: 20px;
+       }
+       .navbar-dark .navbar-toggler:hover,V .navbar-dark .navbar-toggler:active{
+           background-color: rgba(255,255,255,0.2);
+           transition: 0.3s ease;
+       }
+    	/*end*/
+    	.nav-header{
+    		background-color: #eb2f06;
+            color:white;
+            padding: 40px;
+            /*padding-top:10px;
+            width: 100%;*/
+    	}
+         .fas{
+          font-size:70px;
+          padding:40px;
+          color:white;
+       }
+       .bg-header{
+    		background:url(https://p0.piqsels.com/preview/13/60/32/vietnam-ho-chi-minh-city-noodle-foodphotography.jpg) no-repeat fixed;
+    		 background-size: cover;
+    		 min-height:630px;
+    		 position:relative;
+    	} 
+    	.header-bg-orange{
+              background-color:rgba(201, 101, 8,0.67);
+              min-height: 650px;
+    	}
+    	.banner-text{
+       	padding: 180px 40px;
+       	/*color:#FFF;*/
+       	color:#000080;
+       	font-weight: bold;
+       }
+       .banner-text h2, .banner-text p{
+       	   font:400 40px 'Questrial', sans-serif;
+       }
+       .banner-text p{
+       	line-height: 1.4;
+       }
+       .decorate{
+       	font-family: 'Satisfy',cursive;
+       }
+       /*Feature*/
+       .content{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:300px;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius:20%;
+    box-shadow: 5px 2px  black; 
+    cursor:pointer; 
+}
+ #box{
+    padding:20px;
+
+
+}
+.text{
+    font-weight:bold;
+    font-size:25px;
+    text-shadow: 1px 1px 4px grey;
+}
+#image{
+	max-width: 100%;
+        max-height: 100%;
+        display: block; 
+         padding-top: 10px;
+         transition: transform .2s;
+         border-radius: 10%;
+}
+#image:hover{
+  transform: scale(1.5);
+}
+.content{
+	 background-color: black;
+	 box-shadow: 12px 25px 34px -1px rgba(92,74,70,1);
+
+}
+.res-head{
+	color: white;
+	padding: 5px;
+}
+/*veg food*/
+.veg-food img{
+	width:100%;
+	height: 400px;
+	margin: 0;
+}
+div.background {
+  background: url(https://static.toiimg.com/photo/72023714.cms) repeat;
+  border: 2px solid black;
+}
+div.transbox {
+  margin: 40px;
+  background-color: black;
+  opacity: 0.6;
+}
+div.transbox h1{
+  margin: 5%;
+  font-weight: bold;
+  color: #000000;
+  color:white;
+}
+#card-body{
+	padding: 40px;
+}
+.card{
+	background-color:#F79F1F;
+	color: white;
+	box-shadow:1px 1px 4px grey; 
+}
+/* non-veg*/
+.non{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 100vw;
+	height: 15vh;
+	background-color:black;
+	position: relative;
+}
+.non-back{
+	background: linear-gradient(to bottom right, #cc0000 3%, #000066 74%)
+}
+.non-text{
+	font-size: 80px;
+	background: url(https://miro.medium.com/max/2538/0*um6d_kFAS6A7KW4i.) center;
+	background-size: 100%;
+	-webkit-background-clip:text;
+	color: transparent;
+	display: block;
+}
+.cont{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height:250px;
+    width: 250px;
+    padding: 20px;
+    background-color:#130f40;
+    border-radius:50%;
+    box-shadow: 5px 2px  black; 
+    cursor:pointer; 
+}
+#ima{
+	max-width: 100%;
+        max-height: 100%;
+        display: block; 
+         padding-top: 10px;
+         transition: transform .2s;
+         border-radius: 60%;
+}
+</style>
+
+</head>
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<!-- navbar -->
+			<nav class="navbar navbar-dark navbar-expand-md fixed-top" id="my-navbar">
+  			<a href="#home" class="navbar-brand"><img src="https://www.graphicsprings.com/filestorage/stencils/12ffd7318995271ac2f1f0164530bcc2.png?width=500&height=500" style="height:65px;width: 65px;"></a>
+  			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-content" aria-controls="navbar-content" aria-expanded="false"aria-label="Toggle navigation">
+  				<span class="navbar-toggler-icon"></span>	
+  			</button>
+  			<div class="collapse navbar-collapse" id="navbar-content">
+  				<ul class="navbar-nav ml-auto">
+  					<li class="nav-item ">
+  						<a href="#home" class="nav-link">Home</a>
+  					</li>
+  					<li class="nav-item">
+  						<a href="#fast-food" class="nav-link">Fast Food</a>
+  					</li>
+  					<li class="nav-item">
+  						<a href="#veg" class="nav-link">Vegetarian Food</a>
+  					</li>
+  					<li class="nav-item">
+  						<a href="#non-veg" class="nav-link">Non-Veg</a>
+  					</li>
+  					<!-- <li class="nav-item">
+  						<a href="#contact" class="nav-link">Contact</a>
+  					</li> -->
+
+  				</ul>
+  		</nav>
+			<!-- end -->
+			<div class="col-md-12 text-center bg-header" >
+				<section>
+					<!-- <div class="col-md-2"></div> -->
+				<div class="col-md-12 nav-header">
+					<h1 class="display-3">
+					<i class='fas fa-hamburger' style="font-size:48px;color:white;"></i>Food Recipe</h1>
+					<div class="input-group mb-3 mx-auto w-50">
+                     <input type="text" class="form-control" placeholder="Search your Recipe......." aria-label="Recipient's username" aria-describedby="basic-addon2">
+                     <div class="input-group-append">
+                      <button class="btn btn-dark">Search Recipe</button>
+                     </div>
+				    </div>
+				     
+			</div>
+			</section>
+		<!-- </div> -->
+	
+		<!-- <div class="col-md-12 text-center bg-header"> -->
+			<section class="header-bg-orange" id="home"> 
+				<div class="banner-text">
+  						<h2>WELCOME <span class="decorate">Food stock </span>Market,</h2>
+  						<p>Tasty <br>&amp; delicious food</p>
+  					</div>
+			</section>
+		</div>
+	</div>
+	  <section id="fast-food">
+			<div class="jumbotron" style="margin-bottom: 0;">
+				    <h1 class="text-center">Fast Food</h1>
+                    <div class="row">
+                    <div class="col-md-3" id="box">
+                    <div class="content">
+                    	<img id="image" src="https://3.bp.blogspot.com/-WwRLiemSJy0/VTZyXnrPiBI/AAAAAAAADRg/67xdVW6m3do/s1600/pizza_large.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Pizza</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    </div>
+                </div>
+                    </div>
+                     <div class="col-md-3"id="box">
+                    <div class="content">
+                    	<img id="image" src="https://wallsdesk.com/wp-content/uploads/2017/01/Fast-Food-HD-Desktop.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Burger</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    </div>
+                </div>
+                    </div>
+                     <div class="col-md-3"id="box">
+                    <div class="content">
+                    	<img id="image" src="https://i.ytimg.com/vi/6-atvg1iO18/maxresdefault.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Chawmin</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    </div>
+                </div>
+                    </div>
+                     <div class="col-md-3"id="box">
+                    <div class="content">
+                    	<img id="image" src="https://s1.1zoom.me/big0/527/French_fries_Roast_Chicken_Vegetables_Plate_544842_1280x853.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">French Fries</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    </div>
+                </div>
+                    </div>
+                </div>
+                <div class="row">
+                     <div class="col-md-3"id="box">
+                    <div class="content">
+                    	<img id="image" src="https://www.livinghours.com/wp-content/uploads/2016/08/Vegetable-Momos.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Momos</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    </div>
+                </div>
+                    </div>
+                     <div class="col-md-3"id="box">
+                    <div class="content">
+                    	<img id="image" src="https://www.anjappar.com.hk/wp-content/uploads/2018/08/Chilli-Chicken-Dry-2.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Chicken chilli</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    </div>
+                </div>
+                    </div>
+                     <div class="col-md-3"id="box">
+                    <div class="content">
+                    	<img id="image" src="https://i.pinimg.com/originals/5e/9d/91/5e9d914158f20abde43751bc56170aff.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Samosa</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    </div>
+                    </div>
+                    </div>
+                     <div class="col-md-3"id="box">
+                    <div class="content">
+                    	<img id="image" src="https://imgstaticcontent.lbb.in/lbbnew/wp-content/uploads/2017/07/15105928/phuchka-feat-change-%5E.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Pani Puri</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    </div>
+                </div>
+                    </div>
+                    </div>
+		</div>
+		</section>
+		<section id="veg" class="veg-food">
+			<div class="background">
+			<div class="transbox">
+				<h1 class="text-center"><b>Vegitarian Food</b></h1>
+			</div>
+		</div>
+           <div class="row text-center">
+           	<div class="col-md-3"id="card-body">
+           	<div class="card" style="width:300px">
+            <img class="card-img-top" src="https://i0.wp.com/fullofplants.com/wp-content/uploads/2019/05/potato-stuffed-naan-vegan-thumb-2.jpg?fit=1400%2C1400&ssl=1" alt="Card image" style="width:100%">
+            <div class="card-body">
+            <h4 class="card-title">Butter Naan</h4>
+            <a href="#" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3"id="card-body">
+           	<div class="card" style="width:300px">
+            <img class="card-img-top" src="https://www.cookwithmanali.com/wp-content/uploads/2019/05/Paneer-Butter-Masala-500x500.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+            <h4 class="card-title">Paneer Buteer Masala</h4>
+            <a href="#" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3" id="card-body">
+           	<div class="card" style="width:300px">
+            <img class="card-img-top" src="https://www.tarladalal.com/members/9306/big/big_kadai_paneer,__popular_restaurant_style_kadai_paneer-14136.jpg" alt="Card image" style="width:100%">
+            <div class="card-body">
+            <h4 class="card-title">Kadai Paneer</h4>
+           <a href="#" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3"id="card-body">
+           	<div class="card" style="width:300px">
+            <img class="card-img-top" src="https://1.bp.blogspot.com/-_QHI8lgj5n8/XuJ7chjrXYI/AAAAAAAAKQ0/tQuNDYLDYQ4YIhji0IVat-y7iLuutnVGwCLcBGAsYHQ/s1600/Chilli%2BMushroom%2BDry.JPG" alt="Card image" style="width:100%">
+            <div class="card-body">
+            <h4 class="card-title">Masroom Chilli</h4>
+            <a href="#" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</a>
+          </div>
+        </div>
+      </div>
+           </div>
+		</section>
+		<section id="non-veg" class="non">
+			<div class="row text-center">
+				<div class="col-md-12">
+					<h1 class="non-text">NON-VEG FOOD</h1>
+				</div>
+				<div class="non-back">
+				<div class="row">
+					
+                    <div class="col-md-3" id="box">
+                    <div class="cont">
+                    	<img id="ima" src="https://miro.medium.com/max/2538/0*um6d_kFAS6A7KW4i.">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Chicken Biryani</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    			<!-- Modal -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Chicken Biryani Recipe</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        	<h3>Ingredients</h3>
+          <p class="text-center">1 cup boiled basmati rice, 1/2 teaspoon mint leaves, salt as required<br/> 2 tablespoon refined oil, 3 green cardamom, 2 clove<br/>2 onion, 1 teaspoon turmeric, 1 tablespoon garlic paste<br/>1 cup hung curd, 2 tablespoon coriander,  leaves <br/>water as required, 1 tablespoon ghee, 600 gm chicken, 1 tablespoon garam masala powder<br/>1 dash saffron, 1 tablespoon bay leaf, 1 black cardamom<br/>1 teaspoon cumin seeds, 4 green chillies, 1 tablespoon ginger paste<br/>1 teaspoon red chilli powder, 1/2 tablespoon ginger, 2 drops kewra<br/>1 tablespoon rose water</p>         
+        </div>
+        <div><h2 class="text-center">Preparation</h2></div>
+        <div class="modal-footer">
+        	
+        	<p class="text-center">1. To make this delightful biryani, soak saffron in water to prepare saffron water. Next, mix kewra drops in water and mix well to make kewra water.<br/>
+        		2. In the meanwhile, heat refined oil in a deep bottomed pan. Once the oil is hot enough. Add cumin seeds, bay leaf, green cardamom, black cardamom, cloves in it, and saute for about a minute. Then, add chopped onion in it and saute until pink. Now, add chicken into it with slit green chillies, turmeric, salt to taste, ginger garlic paste, red chilli powder, and 2 green chilli paste. Mix well all the spices and cook for 2-3 minutes. Then, add hung curd into it<br/>
+        	    3. Turn the flame to medium again and add garam masala in it along with ginger julienned, coriander and mint leaves. Add kewra water, rose water and saffron water in it. Cook till the chicken is tender.<br/>4. Then add 1 cup cooked rice and spread evenly. Then add saffron water and pour ghee over it. Cook for 15-20 minutes with closed lid and garnish with 1 tbsp fried onions and coriander leaves. Serve hot</p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+                    </div>
+                </div>
+                    </div>
+                     <div class="col-md-3"id="box">
+                    <div class="cont">
+                    	<img id="ima" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRP2_tDiHkI61ZWwx03z8AnJAlFOScQ7FKQ3w&usqp=CAU">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Kadai Chicken</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    			<!-- Modal -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Kadai Chicken Recipe</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        	<h3>Ingredients</h3>
+          <p>1 teaspoon black peppercorns, 2 teaspoons coriander seeds, 2 teaspoons cumin seeds<br/>3 tablespoons ghee, 1 bay leaf, 4 medium onions, chopped<br/>6 garlic cloves, minced, 2-inch ginger, minced, 1 Serrano pepper (or 1–2 Thai bird chilies), minced<br/>2 teaspoons salt, 1 teaspoon Kashmiri chili powder, 1 teaspoon paprika<br/>1 teaspoon turmeric powder, 1 teaspoon garam masala, 2 pounds skinless chicken thighs, cut into quarters<br/>3 tomatoes, pureed in blender (3 cups fresh puree)</p>         
+        </div>
+        <div><h2 class="text-center">Preparation</h2></div>
+        <div class="modal-footer">
+        	
+        	<p class="text-center">1. Roast the whole spices: black peppercorns, coriander seeds and cumin seeds in a cast iron skillet over medium heat, until the spices are fragrant. Coarsely grind the spices in a spice or coffee grinder and set aside.<br/>2. Add ghee, bay leaf, and onions to a wok or dutch oven over medium heat and stir-fry for 15-20 minutes, or until the onions turn golden.<br/>3. Then add garlic, ginger, Serrano pepper, freshly ground spices and the remaining spices to the wok. Stir-fry for a couple minutes then add the chicken.<br/>4. Once the chicken is coated with spices, add the tomato puree. Cover and cook for 10 minutes.<br/>5. Remove lid and raise the heat to high – then cook until the water from the tomato puree evaporates – another 25-30 minutes, stirring occasionally.<b>Enjoy!</b></p>
+        </div>
+      </div>      
+     </div>
+  </div>
+                    </div>
+                </div>
+                    </div>
+                     <div class="col-md-3"id="box">
+                    <div class="cont">
+                    	<img id="ima" src="https://cdn.shortpixel.ai/client/q_lossy,ret_img,w_800/https://foodtippr.com/wp-content/uploads/2017/09/Chicken_Lolipop-3.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Chicken Lolipop</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    			<!-- Modal -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Chicken Lalipop Recipe</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        	<h3>Ingredients</h3>
+          <p>6 full-size chicken wings, 2 cups oil (500 mL), for frying<br/>2 teaspoons chilli powder, 2 tablespoons ginger garlic paste, 1 teaspoon pepper<br/>1 teaspoon salt, 2 tablespoons soy sauce<br/>½ cup flour (60 g), ½ cup cornflour (60 g), 1 tablespoon chilli powder<br/>1 egg, ¼ cup water (60 mL)</p>         
+        </div>
+        <div><h2 class="text-center">Preparation</h2></div>
+        <div class="modal-footer">
+        	
+        	<p class="text-center">1. Add all the marinade ingredients to a bowl and mix until fully combined, set aside.<br/>2. Slice a full-size chicken wing into three parts along the joints. Discard the wing-tip (or you can save them for making a chicken stock).<br/>3. For the drummet (the upper, meaty, one-bone part of the wing), cut along the circumference of the thin end so that the bone and the meat are no longer connected. Then push down the meat so the drummet becomes a lollipop.<br/>4. For the winglet (the middle, two-bone part of the wing), separate where the two bones join, and also cut along the circumferences of both ends, so the bone and the meat are no longer connected. Take out the thinner bone, and push down the meat into one end of the thinner bone.<br/>5. Place the prepared chicken lollipops in the marinade. Stir and cover. Marinate in the fridge for at least 1 hour.<br/>6. Mix all batter ingredients until smooth without lumps. Dip the meat end of the chicken lollipops into the batter.<br/>7. In a medium-sized pot, heat the oil to 170˚C (340˚F). Deep fry the chicken for 5 minutes or until the batter becomes golden brown and the chicken is cooked throughout.<br/><b>Enjoy!</b></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+                    </div>
+                </div>
+                    </div>
+                     <div class="col-md-3"id="box">
+                    <div class="cont">
+                    	<img id="ima" src="https://www.ndtv.com/cooks/images/chicken.korma.2.gif">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Chicken Butter Masala</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    			<!-- Modal -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Chicken Chilli Recipe</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        	<h3>Ingredients</h3>
+          <p>2 chicken breasts<br/>1 teaspoon salt<br/>½ teaspoon pepper<br/>1 egg, beaten<br/>¾ cup flour (100 g)<br/>1 green pepper, sliced<br/>1 red pepper, sliced ,rice, to serve</p>
+          <p><b>CHILLI SAUCE</b><br/>3 cloves garlic cloves, crushed<br/>1 red chilli, chopped ,3 tablespoons soy sauce, 2 tablespoons tomato puree 1/2 cup water(100ml);</p>         
+        </div>
+        <div><h2 class="text-center">Preparation</h2></div>
+        <div class="modal-footer">
+        	
+        	<p class="text-center">1. Season the chicken with salt and pepper.<br/>2. Cut the chicken into thin strips then coat in the egg wash and flour.<br/>3. Shallow fry for a few minutes on each side, until golden brown.<br/>4. Add the peppers and fry for another couple of minutes. Remove the chicken and peppers and set aside.<br/>5. In the same pan, add the garlic, red chilli, soy sauce, tomato purée, and water. Stir and simmer the mixture reduces and is thick and syrupy.<br/>6. Add back in the chicken and peppers and stir well in the sauce.<br/>7. Serve with rice.<br/><b>Enjoy!</b></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+                    </div>
+                </div>
+                    </div>
+                    <div class="col-md-3"id="box">
+                    <div class="cont">
+                    	<img id="ima" src="https://www.cityshor.com/uploads/article/04_2017/1492667649_web3.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Chicken Masala</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    			<!-- Modal -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Chicken Chilli Recipe</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        	<h3>Ingredients</h3>
+          <p>2 chicken breasts<br/>1 teaspoon salt<br/>½ teaspoon pepper<br/>1 egg, beaten<br/>¾ cup flour (100 g)<br/>1 green pepper, sliced<br/>1 red pepper, sliced ,rice, to serve</p>
+          <p><b>CHILLI SAUCE</b><br/>3 cloves garlic cloves, crushed<br/>1 red chilli, chopped ,3 tablespoons soy sauce, 2 tablespoons tomato puree 1/2 cup water(100ml);</p>         
+        </div>
+        <div><h2 class="text-center">Preparation</h2></div>
+        <div class="modal-footer">
+        	
+        	<p class="text-center">1. Season the chicken with salt and pepper.<br/>2. Cut the chicken into thin strips then coat in the egg wash and flour.<br/>3. Shallow fry for a few minutes on each side, until golden brown.<br/>4. Add the peppers and fry for another couple of minutes. Remove the chicken and peppers and set aside.<br/>5. In the same pan, add the garlic, red chilli, soy sauce, tomato purée, and water. Stir and simmer the mixture reduces and is thick and syrupy.<br/>6. Add back in the chicken and peppers and stir well in the sauce.<br/>7. Serve with rice.<br/><b>Enjoy!</b></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+                    </div>
+                </div>
+                    </div>
+                    <div class="col-md-3"id="box">
+                    <div class="cont">
+                    	<img id="ima" src="https://static01.nyt.com/images/2020/03/04/dining/tr-egg-curry/merlin_169211805_227972c0-43d1-4f25-9643-9568331d8adb-articleLarge.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Egg Curry</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    			<!-- Modal -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Chicken Chilli Recipe</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        	<h3>Ingredients</h3>
+          <p>2 chicken breasts<br/>1 teaspoon salt<br/>½ teaspoon pepper<br/>1 egg, beaten<br/>¾ cup flour (100 g)<br/>1 green pepper, sliced<br/>1 red pepper, sliced ,rice, to serve</p>
+          <p><b>CHILLI SAUCE</b><br/>3 cloves garlic cloves, crushed<br/>1 red chilli, chopped ,3 tablespoons soy sauce, 2 tablespoons tomato puree 1/2 cup water(100ml);</p>         
+        </div>
+        <div><h2 class="text-center">Preparation</h2></div>
+        <div class="modal-footer">
+        	
+        	<p class="text-center">1. Season the chicken with salt and pepper.<br/>2. Cut the chicken into thin strips then coat in the egg wash and flour.<br/>3. Shallow fry for a few minutes on each side, until golden brown.<br/>4. Add the peppers and fry for another couple of minutes. Remove the chicken and peppers and set aside.<br/>5. In the same pan, add the garlic, red chilli, soy sauce, tomato purée, and water. Stir and simmer the mixture reduces and is thick and syrupy.<br/>6. Add back in the chicken and peppers and stir well in the sauce.<br/>7. Serve with rice.<br/><b>Enjoy!</b></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+                    </div>
+                </div>
+                    </div>
+                    <div class="col-md-3"id="box">
+                    <div class="cont">
+                    	<img id="ima" src="https://static.toiimg.com/photo/74474551.cms">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Fish curry</h5>
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    			<!-- Modal -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Chicken Chilli Recipe</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        	<h3>Ingredients</h3>
+          <p>2 chicken breasts<br/>1 teaspoon salt<br/>½ teaspoon pepper<br/>1 egg, beaten<br/>¾ cup flour (100 g)<br/>1 green pepper, sliced<br/>1 red pepper, sliced ,rice, to serve</p>
+          <p><b>CHILLI SAUCE</b><br/>3 cloves garlic cloves, crushed<br/>1 red chilli, chopped ,3 tablespoons soy sauce, 2 tablespoons tomato puree 1/2 cup water(100ml);</p>         
+        </div>
+        <div><h2 class="text-center">Preparation</h2></div>
+        <div class="modal-footer">
+        	
+        	<p class="text-center">1. Season the chicken with salt and pepper.<br/>2. Cut the chicken into thin strips then coat in the egg wash and flour.<br/>3. Shallow fry for a few minutes on each side, until golden brown.<br/>4. Add the peppers and fry for another couple of minutes. Remove the chicken and peppers and set aside.<br/>5. In the same pan, add the garlic, red chilli, soy sauce, tomato purée, and water. Stir and simmer the mixture reduces and is thick and syrupy.<br/>6. Add back in the chicken and peppers and stir well in the sauce.<br/>7. Serve with rice.<br/><b>Enjoy!</b></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+                    </div>
+                </div>
+                    </div>
+                    <div class="col-md-3"id="box">
+                    <div class="cont">
+                    	<img id="ima" src="https://i.ytimg.com/vi/-FB0Mu7RHiQ/hqdefault.jpg">
+                    	<div class="text-center">
+                    		<h5 class="res-head">Chicken Chilli</h5>
+                    		<!-- <button type="button" class="btn btn-danger">View Recipe</button> -->
+                    		<button type="button" class="btn btn-danger"data-toggle="modal" data-target="#myModal">View Recipe</button>
+                    		<!-- Modal -->
+                      <div class="modal fade" id="myModal" role="dialog">
+                      <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Chicken Chilli Recipe</h4>
+           <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+        	<h3>Ingredients</h3>
+          <p>2 chicken breasts<br/>1 teaspoon salt<br/>½ teaspoon pepper<br/>1 egg, beaten<br/>¾ cup flour (100 g)<br/>1 green pepper, sliced<br/>1 red pepper, sliced ,rice, to serve</p>
+          <p><b>CHILLI SAUCE</b><br/>3 cloves garlic cloves, crushed<br/>1 red chilli, chopped ,3 tablespoons soy sauce, 2 tablespoons tomato puree 1/2 cup water(100ml);</p>         
+        </div>
+        <div><h2 class="text-center">Preparation</h2></div>
+        <div class="modal-footer">
+        	
+        	<p class="text-center">1. Season the chicken with salt and pepper.<br/>2. Cut the chicken into thin strips then coat in the egg wash and flour.<br/>3. Shallow fry for a few minutes on each side, until golden brown.<br/>4. Add the peppers and fry for another couple of minutes. Remove the chicken and peppers and set aside.<br/>5. In the same pan, add the garlic, red chilli, soy sauce, tomato purée, and water. Stir and simmer the mixture reduces and is thick and syrupy.<br/>6. Add back in the chicken and peppers and stir well in the sauce.<br/>7. Serve with rice.<br/><b>Enjoy!</b></p>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+
+
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+			</div>
+			
+		</section>
+	</div>
+	
+</body>
+</html>
